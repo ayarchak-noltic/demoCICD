@@ -15,4 +15,5 @@ pipelines:
       - step:
           name: Begin creating scratch org
           script:
-            - /bin/bash createScratchOrg.sh
+            - ls
+            - /bin/bash config/createScratchOrg.sh
