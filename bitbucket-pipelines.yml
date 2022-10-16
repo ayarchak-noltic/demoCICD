@@ -6,9 +6,20 @@
 image: atlassian/default-image:3
 
 pipelines:
-  pull-requests:
+  branches:
     feature/*:
       - step:
-          name:
+          name: npm
           script:
-            - echo "Hello mother4qer"
+            - npm --version
+      - step:
+          script:
+            - npm install sfdx-cli --global
+      - step:
+          name: sfdx
+          script:
+            - sfdx --version
+      - step:
+          name: Begin creating scratch org
+          script:
+            - /bin/bash createScratchOrg.sh
