@@ -13,10 +13,6 @@ pipelines:
           script:
             - npm --version
       - step:
-          name: sfdx
-          script:
-            - sfdx --version
-      - step:
           name: Begin creating scratch org
           script:
             - /bin/bash createScratchOrg.sh
