@@ -1,3 +1,4 @@
+ls
 now=$(date "+%s")
 username="test-u_$now@example.com"
 orgAlias="Scratch_$now"
