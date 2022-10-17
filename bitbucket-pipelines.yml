@@ -11,13 +11,13 @@ pipelines:
       - step:
           name: npm
           script:
+            - sudo rm -rf node_modules
+            - npm install
             - npm --version
-      - step:
-          script:
-            - npm install sfdx-cli --global
       - step:
           name: sfdx
           script:
+            - npm install sfdx-cli --global
             - sfdx --version
       - step:
           name: Begin creating scratch org
