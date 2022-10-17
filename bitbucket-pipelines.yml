@@ -11,7 +11,7 @@ pipelines:
       - step:
           name: npm
           script:
-            - sudo rm -rf node_modules
+            - rm -rf node_modules
             - npm install
             - npm --version
       - step:
